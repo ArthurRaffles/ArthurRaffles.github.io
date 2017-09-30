@@ -1,0 +1,361 @@
+
+:root {
+  --main-bg-color: rgb(84,86,89);
+    --main-btn-color: rgb(79, 79, 81);
+      --main-hover-color: rgb(17, 17, 17);
+   --main-color: rgb(247, 248, 249);
+   --text-color: rgb(244, 244, 247);
+   --text-color-dark: rgb(173, 169, 169);
+    --color-dark-50: rgba(173, 169, 169,0.5);
+}
+body {
+    padding-top: 50px;
+      background-color: var(--main-bg-color);
+    min-width: 360px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-container {
+    /* display: flex;
+    flex-direction: column;  */
+     display: flex;
+  flex-flow: row wrap;
+}
+
+.main-component {
+    /* align-self: flex-end;
+    margin: auto; */
+    flex: 1 100%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+.toptitle {
+    background-color: var(--main-bg-color);
+      width:100%;
+    flex: 1 100%;
+}
+.bottombox {
+    background-color: var(--main-bg-color);
+    align-self: flex-end;
+    width:100%;
+    flex: 1 100%;
+    margin-top: 5%;
+    /* margin: auto;
+    --margin-top: 80px;
+    max-height: 100px; */
+}
+
+.bottom {
+    width:100%;
+    padding: 2%;
+    --margin-top: 5%;
+    text-align: center;
+    color: var(--text-color-dark);
+    font-size: 10px;
+}
+
+
+/* Large screens */
+ @media all and (min-width: 800px) {
+  /* We invert order of first sidebar and main
+   * And tell the main element to take twice as much width as the other two sidebars 
+   */
+  /* .main-component { flex: 2 0px; }
+   .toptitle    { order: 1; }
+  .main-component    { order: 2; }
+  .bottombox  { order: 3; } */
+} 
+label {
+    color: rgb(51,102,255);
+}
+
+.pinktext {
+    color: var(--text-color);
+}
+
+.pinktext2 {
+    color: var(--text-color);
+}
+
+.purpletext {
+    color: rgb(175,0,171);
+}
+
+.bluetext {
+    color: rgb(51,102,255);
+}
+
+.orangetext {
+    color: rgb(247,150,70) !important;
+}
+
+.redtext {
+    color: rgb(255,0,0) !important;
+}
+
+.boldtext {
+    font-weight: bold;
+}
+
+.paddingzero {
+    padding: 0px !important;
+}
+
+.borderleft {
+    border-left: 2px solid #ddd;
+}
+
+.borderright {
+    border-right: 2px solid #ddd;
+}
+
+.borderabove {
+    border-top: 2px solid #ddd;
+}
+.border-top-fine {
+    border-top: 1px solid var(--color-dark-50);
+}
+
+.noborder {
+    border: 0px solid rgb(204,255,204);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.75rem;
+    color: var(--text-color);
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+
+h6 {
+    font-size: 1.25rem;
+}
+
+p {
+    font-size: 0.75rem;
+}
+
+li {
+    font-weight: bold;
+}
+
+.navimage{
+}
+
+
+
+.title {
+    color: var(--text-color);
+    text-align: center;
+    /* margin-top: 15px;
+    margin-bottom: 15px; */
+    font-weight: bold;
+}
+
+.centered {
+    text-align: center;
+    /* --margin-top: 5%; */
+}
+
+.InsureButton {
+    background-color: var(--main-btn-color);
+    font-size: 16px;
+    /* border: 2px solid rgb(74,126,187);*/
+    /* border-radius: 5%;  */
+    width: 80%;
+    height: 20vh;
+    margin-top: 5%;
+    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    color: blueviolet; */
+    font-weight: bold;
+}
+button {
+    border: 0;
+}
+.insureclaimbut {
+    background-color: floralwhite;
+    border: 2px solid rgb(74,126,187);
+    border-radius: 20%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    color: blueviolet;
+    font-weight: bold;
+}
+
+.IButtonSpan {
+    color: rgb(51,102,255);
+}
+
+.InsureButton:hover {
+    background-color: var(--main-hover-color);
+}
+
+.InsureButton:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.startedbut {
+    height: 15vh;
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+
+.listprices {
+    text-align: center;
+}
+
+.listprice {
+    padding-left: 20%;
+    padding-right: 10%;
+}
+
+.emptyitem {
+    text-align: center;
+    min-height: 3em;
+}
+
+
+
+.tohide {
+    display: none;
+}
+
+.toshow {
+    display: block;
+}
+
+.spaceabove {
+    margin-top: 10px;
+}
+
+.leftspace {
+    margin-left:5px;
+}
+
+.emaillink {
+    text-decoration: underline;
+}
+
+#claimref {
+    position: absolute;
+    z-index: 5;
+    height: 95%;
+    width: 95%;
+}
+
+@media (max-width: 768px) {
+    .InsureButton {
+        height: 30vh;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+    
+    .InsureButton {
+        height: 25vh;
+    }
+    
+    .listprice {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .listprices {
+        font-weight: normal;
+    }
+}
+
+@media (min-width: 480px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 992px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.direct {
+    font-weight: bold;
+}
+
+#gadgetcalculator {
+    background: rgb(204,255,204);
+    position: absolute;
+    z-index: 5;
+    height: 95%;
+    width: 95%;
+}
+
+
+
+.bottomtext {
+    bottom: 0;
+}
+
+.closebutton {
+    border: 2px solid black;
+    color: black;
+    background: white;
+    height: 4vh;
+    min-height: 35px;
+    width: 100%;
+}
+
+.popuphelp {
+    display: none;
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+    z-index: 5;
+    position: absolute;
+    background: white;
+    border-radius: 25px;
+    border: 2px solid rgb(74,126,187);
+}
+
+.popuphelp::before {
+    content: "";
+    position: absolute;
+    bottom: 90%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgb(255,153,204) transparent transparent transparent;
+}
+
+
