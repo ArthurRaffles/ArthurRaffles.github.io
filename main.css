@@ -2,11 +2,16 @@
 :root {
   --main-bg-color: rgb(84,86,89);
     --main-btn-color: rgb(79, 79, 81);
-      --main-hover-color: rgb(17, 17, 17);
+    --control-background-color: rgb(79, 79, 81);
+    --disabled-background-color: rgb(132, 132, 138);
+    --main-hover-color: rgb(17, 17, 17);
    --main-color: rgb(247, 248, 249);
    --text-color: rgb(244, 244, 247);
    --text-color-dark: rgb(173, 169, 169);
+   --color-insure-people: rgb(255,119,251);
     --color-dark-50: rgba(173, 169, 169,0.5);
+    --global-padding: 10px;
+    --global-margin: 10px;
 }
 body {
     padding-top: 50px;
@@ -21,7 +26,15 @@ body {
      display: flex;
   flex-flow: row wrap;
 }
-
+.table-responsive{
+    margin-left: 30px;
+}
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: var(--control-background-color);
+}
+.pad-control {
+    margin-right: var(--global-padding);
+}
 .main-component {
     /* align-self: flex-end;
     margin: auto; */
@@ -66,9 +79,11 @@ body {
   .bottombox  { order: 3; } */
 } 
 label {
-    color: rgb(51,102,255);
+    color: var(--text-color);
 }
-
+.text-action {
+    color: var(--color-insure-people);
+}
 .pinktext {
     color: var(--text-color);
 }
@@ -89,6 +104,10 @@ label {
     color: rgb(247,150,70) !important;
 }
 
+.info-text {
+    color: var(--text-color);
+}
+
 .redtext {
     color: rgb(255,0,0) !important;
 }
@@ -102,15 +121,15 @@ label {
 }
 
 .borderleft {
-    border-left: 2px solid #ddd;
+    border-left: 2px solid var(--color-dark-50);
 }
 
 .borderright {
-    border-right: 2px solid #ddd;
+    border-right: 2px solid var(--color-dark-50)
 }
 
 .borderabove {
-    border-top: 2px solid #ddd;
+    border-top: 2px solid var(--color-dark-50);
 }
 .border-top-fine {
     border-top: 1px solid var(--color-dark-50);
@@ -147,6 +166,8 @@ h6 {
 
 p {
     font-size: 0.75rem;
+    margin: var(--global-margin) 0 var(--global-margin);
+    text-align: center;
 }
 
 li {
@@ -155,7 +176,6 @@ li {
 
 .navimage{
 }
-
 
 
 .title {
@@ -221,25 +241,51 @@ button {
 }
 
 .listprice {
-    padding-left: 20%;
-    padding-right: 10%;
+    width: 110px;
+    text-align: left;
 }
 
 .emptyitem {
     text-align: center;
     min-height: 3em;
+    background-color: var(--control-background-color);
+    color: var(--text-color);
+    border: 0;
+    padding-top: var(--global-padding);
 }
-
-
 
 .tohide {
     display: none;
 }
-
-.toshow {
-    display: block;
+.sort-code{
+    display: flex;
+    justify-content: space-between;
+    --margin-bottom: 15px;
+}
+.col-sm-5, .col-sm-6, .col-sm-7, 
+.col-sm-12, .col-xs-12, .col-xs-11 {
+        padding-right: 0;
+    padding-left: 0;
 }
 
+.toshow {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--main-btn-color);
+    border: 0;
+    color: var(--text-color);
+}
+
+.form-control {
+    background-color: var(--control-background-color);
+    color: var(--text-color);
+    border: 0;
+    border-radius: 0px;
+}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: var(--disabled-background-color);
+    opacity: 1;
+}
 .spaceabove {
     margin-top: 10px;
 }
@@ -311,9 +357,14 @@ button {
 .direct {
     font-weight: bold;
 }
-
+.modal-content{
+    height: 500px;
+    opacity: 0.9;
+    background-color: black;
+}
 #gadgetcalculator {
-    background: rgb(204,255,204);
+/*     
+   background: var(--disabled-background-color); */
     position: absolute;
     z-index: 5;
     height: 95%;
